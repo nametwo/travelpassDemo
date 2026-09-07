@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TravelPass | 사용처 + 혜택</title>
+<title>TravelPass | 혜택</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/site.css?v=9">
+<link rel="stylesheet" href="assets/site.css?v=27">
 </head>
 <body>
 <header>
@@ -14,9 +14,9 @@
     <a class="logo" href="card-intro.html"><span class="mark"><svg class="i" viewBox="0 0 24 24"><path d="M2 12l19-8-6 18-3-8-10-2z"/></svg></span><span>Travel<em>Pass</em></span></a>
     <nav aria-label="주요 메뉴"><ul>
       <li><a href="card-intro.html">카드 소개</a></li>
-      <li><a href="benefits.html" class="active">사용처 + 혜택</a></li>
+      <li><a href="benefits.html" class="active">혜택</a></li>
       <li><a href="#">발급</a></li>
-      <li><a href="card-intro.html#faq">FAQ</a></li>
+      <li><a href="faq.html">FAQ</a></li>
     </ul></nav>
     <div class="hright">
       <button class="btn btn-outline btn-sm" data-dl><svg class="i" viewBox="0 0 24 24"><path d="M12 4v12M6 11l6 6 6-6M4 20h16"/></svg> 앱 다운 받기</button>
@@ -29,55 +29,103 @@
 <style>
   .phead{background:var(--white);padding:var(--s7) 0 0;border-bottom:1px solid var(--line)}
   .phead h1{font-size:clamp(36px,5vw,64px)}
-  .phead .tabs{margin-top:var(--s5);border-bottom:0}
-  .phead .tab{font-size:18px;padding:16px 4px;margin-right:var(--s4)}
-  .ppanel{display:none} .ppanel.on{display:block}
+  .phead{padding-bottom:var(--s7)}
+  .phead .marquee{margin-top:var(--s6)}
+  /* 사용처 */
   .ulist{margin-top:var(--s6);border-top:1px solid var(--line)}
   .urow{display:grid;grid-template-columns:200px 1fr 1fr;gap:var(--s4);align-items:baseline;padding:var(--s4) 0;border-bottom:1px solid var(--line)}
   .urow h3{font-size:24px}
   .brands{display:flex;flex-wrap:wrap;gap:var(--s1) var(--s3);font-weight:900;font-size:18px;letter-spacing:-.02em;color:var(--ink-2)}
   .urow p{color:var(--muted);font-size:16px;word-break:keep-all}
   @media(max-width:860px){.urow{grid-template-columns:1fr;gap:var(--s1)}.brands{font-size:16px}}
-  .callout{margin-top:var(--s6);background:var(--ink);color:#fff;border-radius:var(--r-surface);padding:var(--s5) var(--s5);display:flex;justify-content:space-between;align-items:center;gap:var(--s4);flex-wrap:wrap}
+  .callout{margin-top:var(--s6);background:var(--ink);color:#fff;border-radius:var(--r-surface);padding:var(--s5);display:flex;justify-content:space-between;align-items:center;gap:var(--s4);flex-wrap:wrap}
   .callout h3{font-size:clamp(24px,3vw,32px)}
   .callout p{color:rgba(255,255,255,.7);margin-top:6px;word-break:keep-all}
   .callout .i{width:48px;height:48px;color:var(--orange);stroke-width:2.5}
-  .bens{display:grid;grid-template-columns:repeat(3,1fr);margin-top:var(--s6);border-top:1px solid var(--line)}
-  .ben{padding:var(--s5) var(--s4) var(--s5) 0;border-right:1px solid var(--line);margin-right:var(--s4)}
-  .ben:last-child{border-right:0;margin-right:0}
-  .ben .big{font-size:clamp(48px,6vw,80px);font-weight:900;letter-spacing:-.05em;line-height:1;color:var(--orange);margin-bottom:var(--s2)}
-  .ben h3{font-size:22px;margin-bottom:var(--s1)}
-  .ben p{color:var(--muted);font-size:16px;word-break:keep-all}
-  .ben .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:var(--s2)}
-  @media(max-width:860px){.bens{grid-template-columns:1fr}.ben{border-right:0;margin-right:0;padding-right:0;border-bottom:1px solid var(--line)}.ben:last-child{border-bottom:0}}
-  .bcta{margin-top:var(--s6);text-align:center;padding:var(--s6) var(--s4);border-top:1px solid var(--line)}
+  /* 유명 앱 벽 */
+  .wall{display:flex;flex-wrap:wrap;gap:12px;margin-top:var(--s6)}
+  .wall span{padding:16px 24px;border:1px solid var(--line);border-radius:var(--r-pill);font-size:18px;font-weight:900;letter-spacing:-.03em;color:var(--ink-2);transition:border-color .2s,color .2s,background .2s}
+  .wall span:hover{border-color:var(--orange);color:var(--orange);background:var(--orange-soft)}
+  @media(max-width:600px){.wall span{padding:12px 16px;font-size:15px}}
+  /* 앱 연동 서비스 */
+  .svc{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r-surface);overflow:hidden;margin-top:var(--s4)}
+  .svc div{background:var(--white);padding:var(--s4) var(--s3);min-height:150px;display:flex;flex-direction:column;justify-content:space-between;transition:background .2s}
+  .svc div:hover{background:var(--orange-soft)}
+  .svc b{font-size:20px;font-weight:900;letter-spacing:-.03em;color:var(--ink)}
+  .svc span{font-size:15px;color:var(--muted);word-break:keep-all;margin-top:var(--s2)}
+  @media(max-width:860px){.svc{grid-template-columns:repeat(2,1fr)}.svc div{min-height:120px}}
+  /* 혜택 */
+  .zero{margin-top:var(--s7);border-radius:var(--r-surface);background:var(--grad);color:#fff;padding:var(--s6) var(--s5);display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr;gap:var(--s4);align-items:center}
+  .zero h3{font-size:clamp(28px,3.4vw,44px);letter-spacing:-.04em}
+  .zero h3 small{display:block;font-size:16px;font-weight:700;opacity:.85;margin-top:var(--s1);letter-spacing:0}
+  .zero div{border-left:1px solid rgba(255,255,255,.3);padding-left:var(--s3)}
+  .zero b{display:block;font-size:clamp(36px,4.5vw,64px);font-weight:900;letter-spacing:-.05em;line-height:1}
+  .zero span{display:block;font-size:15px;opacity:.85;margin-top:6px}
+  @media(max-width:860px){.zero{grid-template-columns:1fr 1fr;padding:var(--s4)}.zero h3{grid-column:1/-1}.zero div{border-left:0;padding-left:0;border-top:1px solid rgba(255,255,255,.3);padding-top:var(--s2)}}
+  .soon{margin-top:var(--s4);color:var(--muted-2)}
+  .bhead{margin-top:var(--s7);display:flex;justify-content:space-between;align-items:flex-end;gap:var(--s3);flex-wrap:wrap}
+  .bhead h3{font-size:clamp(24px,2.8vw,32px)}
+  .bhead p{color:var(--muted);margin-top:4px}
+  .regions{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--s2);margin-top:var(--s4)}
+  .region{background:var(--white);border:1px solid var(--line);border-radius:var(--r-surface);padding:var(--s4) var(--s3);min-height:170px;display:flex;flex-direction:column;justify-content:space-between;transition:border-color .2s,transform .2s}
+  .region:hover{border-color:var(--orange);transform:translateY(-3px)}
+  .region b{font-size:32px;font-weight:900;letter-spacing:-.04em}
+  .region span{font-size:15px;color:var(--muted);word-break:keep-all}
+  .region .tag{font-size:12px;font-weight:700;color:var(--orange);margin-bottom:var(--s1)}
+  @media(max-width:860px){.regions{grid-template-columns:1fr 1fr}.region{min-height:140px}.region b{font-size:26px}}
+  .partners{display:flex;margin-top:var(--s4);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .partners span{flex:1;padding:var(--s4) var(--s2);text-align:center;font-size:24px;font-weight:900;letter-spacing:-.03em;color:var(--ink-2);border-right:1px solid var(--line)}
+  .partners span:last-child{border-right:0}
+  .partners small{display:block;font-size:13px;font-weight:400;color:var(--muted-2);letter-spacing:0;margin-top:4px}
+  @media(max-width:600px){.partners{flex-direction:column}.partners span{border-right:0;border-bottom:1px solid var(--line)}.partners span:last-child{border-bottom:0}}
+  .bcta{margin-top:var(--s7);text-align:center;padding:var(--s6) var(--s4);border-top:1px solid var(--line)}
   .bcta h3{font-size:clamp(26px,3.4vw,36px);margin-bottom:var(--s1)}
   .bcta p{color:var(--muted);margin-bottom:var(--s4)}
 </style>
 
 <section class="phead" data-first>
   <div class="wrap">
-    <h1>사용처 + 혜택</h1>
-    <p class="lead">한국 카드가 되는 곳이면 어디서나, 쓰기만 해도 이득</p>
-    <div class="tabs" role="tablist" data-tabs="page" data-hash>
-      <button class="tab on" role="tab" data-tab="use">사용처</button>
-      <button class="tab" role="tab" data-tab="benefit">혜택</button>
+    <h1>어떤 앱에도<br>등록되는 카드.</h1>
+    <p class="lead">내 이름으로 된 카드니까. 가입까지 필요한 곳은 앱 안에서 한 번에.</p>
+  </div>
+  <div class="wrap">
+    <div class="marquee" aria-label="결제 가능한 주요 앱">
+      <div class="marquee-track">
+        <div class="marks"><span>카카오T<small>택시</small></span><span>배달의민족<small>배달</small></span><span>코레일톡<small>기차표</small></span><span>쿠팡<small>쇼핑</small></span><span>네이버 예약<small>맛집 · 숙소</small></span><span>야놀자<small>호텔 · 레저</small></span><span>K.ride<small>택시 호출</small></span><span>티머니<small>교통</small></span><span>쿠팡이츠<small>배달</small></span><span>무신사<small>패션</small></span><span>올리브영<small>뷰티</small></span><span>NOL<small>공연</small></span><span>JUMP<small>입장권</small></span></div>
+        <div class="marks" aria-hidden="true"><span>카카오T<small>택시</small></span><span>배달의민족<small>배달</small></span><span>코레일톡<small>기차표</small></span><span>쿠팡<small>쇼핑</small></span><span>네이버 예약<small>맛집 · 숙소</small></span><span>야놀자<small>호텔 · 레저</small></span><span>K.ride<small>택시 호출</small></span><span>티머니<small>교통</small></span><span>쿠팡이츠<small>배달</small></span><span>무신사<small>패션</small></span><span>올리브영<small>뷰티</small></span><span>NOL<small>공연</small></span><span>JUMP<small>입장권</small></span></div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- 사용처 -->
-<section class="ppanel on bg-cream" data-panel-group="page" data-panel="use">
+
+
+<!-- 등록되는 앱 -->
+<section class="bg-cream" id="use">
   <div class="wrap">
-    <h2>한국 카드처럼, 어디서나</h2>
-    <p class="lead">전국 가맹점 · 주요 앱 · 교통, 한국인과 똑같이</p>
-    <div class="ulist">
-      <div class="urow"><h3>교통</h3><div class="brands"><span>K.ride</span><span>코레일</span><span>티머니</span></div><p>택시 호출, KTX 예매, 지하철·버스</p></div>
-      <div class="urow"><h3>배달</h3><div class="brands"><span>배달의민족</span><span>쿠팡이츠</span></div><p>숙소에서 주문, 앱에서 결제</p></div>
-      <div class="urow"><h3>쇼핑</h3><div class="brands"><span>쿠팡</span><span>무신사</span><span>올리브영</span></div><p>온라인 쇼핑, 한국 배송지로</p></div>
-      <div class="urow"><h3>숙소·예약</h3><div class="brands"><span>야놀자</span><span>네이버 예약</span></div><p>호텔·맛집 예약까지 앱에서</p></div>
-      <div class="urow"><h3>공연·입장권</h3><div class="brands"><span>NOL</span><span>JUMP</span></div><p>콘서트, 전시, 관광지 티켓</p></div>
-      <div class="urow"><h3>매장</h3><div class="brands"><span>편의점</span><span>카페</span><span>백화점</span><span>시장</span></div><p>카드 긁거나 QR, 그냥 됩니다</p></div>
+    <h2>등록되는 앱</h2>
+    <p class="lead">결제수단에 트래블패스를 넣으면, 한국 카드와 똑같이 결제됩니다</p>
+    <div class="wall" aria-label="결제 가능한 한국 앱">
+      <span>카카오T</span>
+      <span>배달의민족</span>
+      <span>쿠팡이츠</span>
+      <span>요기요</span>
+      <span>쿠팡</span>
+      <span>컬리</span>
+      <span>무신사</span>
+      <span>올리브영</span>
+      <span>네이버 예약</span>
+      <span>캐치테이블</span>
+      <span>야놀자</span>
+      <span>여기어때</span>
+      <span>코레일톡</span>
+      <span>티머니</span>
+      <span>NOL</span>
+      <span>JUMP</span>
+      <span>CGV</span>
+      <span>스타벅스</span>
+      <span>다이소</span>
+      <span>당근</span>
     </div>
     <div class="callout">
       <div><h3>여기 없는 앱도 됩니다</h3><p>한국 카드가 되는 곳이면, 트래블패스도 됩니다</p></div>
@@ -86,21 +134,47 @@
   </div>
 </section>
 
-<!-- 혜택 -->
-<section class="ppanel bg-cream" data-panel-group="page" data-panel="benefit">
+<!-- 가입까지 한 번에 -->
+<section class="bg-white">
   <div class="wrap">
-    <h2>쓰기만 해도 이득</h2>
-    <p class="lead">발급부터 환불까지 수수료 없이, 지역 할인까지</p>
-    <div class="bens">
-      <div class="ben"><div class="big">0원</div><h3>수수료 0원</h3><p>발급 · 충전 · 환불 전부</p><div class="chips"><span class="chip">발급</span><span class="chip">충전</span><span class="chip">환불</span></div></div>
-      <div class="ben"><div class="big">4곳</div><h3>지자체 관광카드 연동</h3><p>부산 · 전주 · 충청 · 전남 지역 할인, 관광지 무료입장</p><div class="chips"><span class="chip">부산</span><span class="chip">전주</span><span class="chip">충청</span><span class="chip">전남</span></div></div>
-      <div class="ben"><div class="big">할인</div><h3>제휴 할인</h3><p>올리브영 · 다이소 · 면세점</p><div class="chips"><span class="chip">올리브영</span><span class="chip">다이소</span><span class="chip">면세점</span></div></div>
+    <h2>가입까지 한 번에</h2>
+    <p class="lead">여권 인증 한 번으로 제휴 서비스 회원가입까지. 앱 안에서 바로 예약하고 이동합니다</p>
+    <div class="svc" aria-label="앱 연동 서비스">
+      <div><b>K.ride</b><span>외국인용 택시 호출</span></div>
+      <div><b>코레일</b><span>기차표 예매</span></div>
+      <div><b>로이쿠</b><span>여행지 기사 매칭</span></div>
+      <div><b>Goodlugg</b><span>짐 배송</span></div>
+      <div><b>집업페이</b><span>월세 결제</span></div>
+      <div><b>LINKTIVITY</b><span>일본 여행 상품 연계</span></div>
+      <div><b>세시간전</b><span>여행 크리에이터 콘텐츠</span></div>
+      <div><b style="color:var(--muted-2)">+ 추가 예정</b><span>제휴 확정 시 업데이트</span></div>
     </div>
-    <div class="bcta">
-      <h3>자세한 혜택은 앱에서</h3>
-      <p>지역별 할인과 제휴 매장을 앱에서 확인하세요</p>
-      <button class="btn btn-primary" data-dl><svg class="i" viewBox="0 0 24 24"><path d="M12 4v12M6 11l6 6 6-6M4 20h16"/></svg> 앱 다운로드</button>
+  </div>
+</section>
+
+<!-- 이름이 없으면 안 되는 것들 -->
+<section class="bg-cream cmp">
+  <div class="wrap">
+    <h2>이름이 없으면 안 되는 것들</h2>
+    <table>
+      <thead><tr><th scope="col"></th><th scope="col">무기명 선불카드</th><th scope="col" class="us">Travel Pass</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">앱 등록</th><td class="them"><span class="no">안 됨</span></td><td class="us"><span class="ok">배민 · 카카오T · 쿠팡</span></td></tr>
+        <tr><th scope="row">온라인 결제</th><td class="them"><span class="no">안 됨</span></td><td class="us"><span class="ok">됨</span></td></tr>
+        <tr><th scope="row">환불</th><td class="them"><span class="no">창구 방문</span></td><td class="us"><span class="ok">앱에서 바로</span></td></tr>
+        <tr><th scope="row">충전</th><td class="them"><span class="no">전용 키오스크</span></td><td class="us"><span class="ok">190개국 통화 · 앱 · 편의점 · ATM</span></td></tr>
+        <tr><th scope="row">교통</th><td class="them"><span class="no">따로 구매</span></td><td class="us"><span class="ok">내장</span></td></tr>
+      </tbody>
+    </table>
+
+    <div class="zero">
+      <h3>수수료 0원.<small>발급도, 충전도, 환불도.</small></h3>
+      <div><b>0원</b><span>발급</span></div>
+      <div><b>0원</b><span>충전</span></div>
+      <div><b>0원</b><span>원화 환불</span></div>
     </div>
+
+    <p class="small soon">곧 추가됩니다. 부산 · 전주 · 충청 · 전남 관광 할인, 올리브영 · 다이소 · 면세점 제휴 할인</p>
   </div>
 </section>
 
@@ -152,9 +226,9 @@
   </div>
   <ul>
     <li><a href="card-intro.html">카드 소개</a></li>
-    <li><a href="benefits.html" class="active">사용처 + 혜택</a></li>
+    <li><a href="benefits.html" class="active">혜택</a></li>
     <li><a href="#">발급</a></li>
-    <li><a href="card-intro.html#faq">FAQ</a></li>
+    <li><a href="faq.html">FAQ</a></li>
   </ul>
   <div class="bottom">
     <p>앱 다운로드</p>
@@ -172,14 +246,14 @@
         <a class="logo" href="card-intro.html"><span class="mark"><svg class="i" viewBox="0 0 24 24"><path d="M2 12l19-8-6 18-3-8-10-2z"/></svg></span><span>Travel<em>Pass</em></span></a>
         <p style="margin-top:16px;font-size:15px">한국 생활의 모든 순간을 하나로.</p>
       </div>
-      <div><h4>TravelPass</h4><ul><li><a href="card-intro.html">서비스 소개</a></li><li><a href="benefits.html">사용처 · 혜택</a></li><li><a href="#">카드 발급방법</a></li></ul></div>
-      <div><h4>도움말</h4><ul><li><a href="card-intro.html#faq">자주 묻는 질문</a></li><li><a href="#">고객센터</a></li><li><a href="#">제휴 문의</a></li></ul></div>
+      <div><h4>TravelPass</h4><ul><li><a href="card-intro.html">서비스 소개</a></li><li><a href="benefits.html">혜택</a></li><li><a href="#">카드 발급방법</a></li></ul></div>
+      <div><h4>도움말</h4><ul><li><a href="faq.html">자주 묻는 질문</a></li><li><a href="#">고객센터</a></li><li><a href="#">제휴 문의</a></li></ul></div>
       <div><h4>언어</h4><ul><li><a href="#">English</a></li><li><a href="#">日本語</a></li><li><a href="#">中文(简体)</a></li></ul></div>
     </div>
     <div class="bottom"><span>© 2025 TravelPass. 모든 권리 보유.</span><span>개인정보처리방침 · 이용약관</span></div>
   </div>
 </footer>
 
-<script src="assets/site.js?v=7"></script>
+<script src="assets/site.js?v=11"></script>
 </body>
 </html>
