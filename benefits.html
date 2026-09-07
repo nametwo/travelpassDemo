@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TravelPass | 사용처 + 혜택</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css?v=9">
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="logo" href="card-intro.html"><span class="mark"><svg class="i" viewBox="0 0 24 24"><path d="M2 12l19-8-6 18-3-8-10-2z"/></svg></span><span>Travel<em>Pass</em></span></a>
+    <nav aria-label="주요 메뉴"><ul>
+      <li><a href="card-intro.html">카드 소개</a></li>
+      <li><a href="benefits.html" class="active">사용처 + 혜택</a></li>
+      <li><a href="#">발급</a></li>
+      <li><a href="card-intro.html#faq">FAQ</a></li>
+    </ul></nav>
+    <div class="hright">
+      <button class="btn btn-outline btn-sm" data-dl><svg class="i" viewBox="0 0 24 24"><path d="M12 4v12M6 11l6 6 6-6M4 20h16"/></svg> 앱 다운 받기</button>
+      <button class="lang" aria-label="언어 선택"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></svg> KO <svg class="i" viewBox="0 0 24 24" style="width:1em;height:1em"><path d="M6 9l6 6 6-6"/></svg></button>
+      <button class="burger" aria-label="메뉴 열기" data-menu><svg class="i" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<style>
+  .phead{background:var(--white);padding:var(--s7) 0 0;border-bottom:1px solid var(--line)}
+  .phead h1{font-size:clamp(36px,5vw,64px)}
+  .phead .tabs{margin-top:var(--s5);border-bottom:0}
+  .phead .tab{font-size:18px;padding:16px 4px;margin-right:var(--s4)}
+  .ppanel{display:none} .ppanel.on{display:block}
+  .ulist{margin-top:var(--s6);border-top:1px solid var(--line)}
+  .urow{display:grid;grid-template-columns:200px 1fr 1fr;gap:var(--s4);align-items:baseline;padding:var(--s4) 0;border-bottom:1px solid var(--line)}
+  .urow h3{font-size:24px}
+  .brands{display:flex;flex-wrap:wrap;gap:var(--s1) var(--s3);font-weight:900;font-size:18px;letter-spacing:-.02em;color:var(--ink-2)}
+  .urow p{color:var(--muted);font-size:16px;word-break:keep-all}
+  @media(max-width:860px){.urow{grid-template-columns:1fr;gap:var(--s1)}.brands{font-size:16px}}
+  .callout{margin-top:var(--s6);background:var(--ink);color:#fff;border-radius:var(--r-surface);padding:var(--s5) var(--s5);display:flex;justify-content:space-between;align-items:center;gap:var(--s4);flex-wrap:wrap}
+  .callout h3{font-size:clamp(24px,3vw,32px)}
+  .callout p{color:rgba(255,255,255,.7);margin-top:6px;word-break:keep-all}
+  .callout .i{width:48px;height:48px;color:var(--orange);stroke-width:2.5}
+  .bens{display:grid;grid-template-columns:repeat(3,1fr);margin-top:var(--s6);border-top:1px solid var(--line)}
+  .ben{padding:var(--s5) var(--s4) var(--s5) 0;border-right:1px solid var(--line);margin-right:var(--s4)}
+  .ben:last-child{border-right:0;margin-right:0}
+  .ben .big{font-size:clamp(48px,6vw,80px);font-weight:900;letter-spacing:-.05em;line-height:1;color:var(--orange);margin-bottom:var(--s2)}
+  .ben h3{font-size:22px;margin-bottom:var(--s1)}
+  .ben p{color:var(--muted);font-size:16px;word-break:keep-all}
+  .ben .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:var(--s2)}
+  @media(max-width:860px){.bens{grid-template-columns:1fr}.ben{border-right:0;margin-right:0;padding-right:0;border-bottom:1px solid var(--line)}.ben:last-child{border-bottom:0}}
+  .bcta{margin-top:var(--s6);text-align:center;padding:var(--s6) var(--s4);border-top:1px solid var(--line)}
+  .bcta h3{font-size:clamp(26px,3.4vw,36px);margin-bottom:var(--s1)}
+  .bcta p{color:var(--muted);margin-bottom:var(--s4)}
+</style>
+
+<section class="phead" data-first>
+  <div class="wrap">
+    <h1>사용처 + 혜택</h1>
+    <p class="lead">한국 카드가 되는 곳이면 어디서나, 쓰기만 해도 이득</p>
+    <div class="tabs" role="tablist" data-tabs="page" data-hash>
+      <button class="tab on" role="tab" data-tab="use">사용처</button>
+      <button class="tab" role="tab" data-tab="benefit">혜택</button>
+    </div>
+  </div>
+</section>
+
+<!-- 사용처 -->
+<section class="ppanel on bg-cream" data-panel-group="page" data-panel="use">
+  <div class="wrap">
+    <h2>한국 카드처럼, 어디서나</h2>
+    <p class="lead">전국 가맹점 · 주요 앱 · 교통, 한국인과 똑같이</p>
+    <div class="ulist">
+      <div class="urow"><h3>교통</h3><div class="brands"><span>K.ride</span><span>코레일</span><span>티머니</span></div><p>택시 호출, KTX 예매, 지하철·버스</p></div>
+      <div class="urow"><h3>배달</h3><div class="brands"><span>배달의민족</span><span>쿠팡이츠</span></div><p>숙소에서 주문, 앱에서 결제</p></div>
+      <div class="urow"><h3>쇼핑</h3><div class="brands"><span>쿠팡</span><span>무신사</span><span>올리브영</span></div><p>온라인 쇼핑, 한국 배송지로</p></div>
+      <div class="urow"><h3>숙소·예약</h3><div class="brands"><span>야놀자</span><span>네이버 예약</span></div><p>호텔·맛집 예약까지 앱에서</p></div>
+      <div class="urow"><h3>공연·입장권</h3><div class="brands"><span>NOL</span><span>JUMP</span></div><p>콘서트, 전시, 관광지 티켓</p></div>
+      <div class="urow"><h3>매장</h3><div class="brands"><span>편의점</span><span>카페</span><span>백화점</span><span>시장</span></div><p>카드 긁거나 QR, 그냥 됩니다</p></div>
+    </div>
+    <div class="callout">
+      <div><h3>여기 없는 앱도 됩니다</h3><p>한국 카드가 되는 곳이면, 트래블패스도 됩니다</p></div>
+      <svg class="i" viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>
+    </div>
+  </div>
+</section>
+
+<!-- 혜택 -->
+<section class="ppanel bg-cream" data-panel-group="page" data-panel="benefit">
+  <div class="wrap">
+    <h2>쓰기만 해도 이득</h2>
+    <p class="lead">발급부터 환불까지 수수료 없이, 지역 할인까지</p>
+    <div class="bens">
+      <div class="ben"><div class="big">0원</div><h3>수수료 0원</h3><p>발급 · 충전 · 환불 전부</p><div class="chips"><span class="chip">발급</span><span class="chip">충전</span><span class="chip">환불</span></div></div>
+      <div class="ben"><div class="big">4곳</div><h3>지자체 관광카드 연동</h3><p>부산 · 전주 · 충청 · 전남 지역 할인, 관광지 무료입장</p><div class="chips"><span class="chip">부산</span><span class="chip">전주</span><span class="chip">충청</span><span class="chip">전남</span></div></div>
+      <div class="ben"><div class="big">할인</div><h3>제휴 할인</h3><p>올리브영 · 다이소 · 면세점</p><div class="chips"><span class="chip">올리브영</span><span class="chip">다이소</span><span class="chip">면세점</span></div></div>
+    </div>
+    <div class="bcta">
+      <h3>자세한 혜택은 앱에서</h3>
+      <p>지역별 할인과 제휴 매장을 앱에서 확인하세요</p>
+      <button class="btn btn-primary" data-dl><svg class="i" viewBox="0 0 24 24"><path d="M12 4v12M6 11l6 6 6-6M4 20h16"/></svg> 앱 다운로드</button>
+    </div>
+  </div>
+</section>
+
+<!-- 다운로드 띠: 데스크톱 QR / 모바일 딥링크 -->
+<div class="band bg-orange dl" id="download">
+  <div class="wrap reveal">
+    <h2>출발 전에 받아두세요</h2>
+        <div class="cta only-d">
+      <div class="qr" data-qr></div>
+      <span class="small" style="color:rgba(255,255,255,.8)">카메라로 QR을 스캔하면 앱 스토어로 이동합니다</span>
+    </div>
+    <div class="cta only-m">
+      <div class="store-row">
+        <a class="store light" href="#" data-store="ios"><svg class="i" viewBox="0 0 24 24" style="fill:currentColor;stroke:none"><path d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.8-1.6 0-3.1 1-4 2.4-1.7 3-.4 7.3 1.2 9.7.8 1.2 1.8 2.5 3.1 2.4 1.2 0 1.7-.8 3.2-.8s1.9.8 3.2.8c1.3 0 2.2-1.2 3-2.4.9-1.4 1.3-2.7 1.3-2.8 0 0-2.6-1-2.7-3.8zM14 5.4c.7-.8 1.1-2 1-3.1-1 0-2.2.7-2.9 1.5-.6.7-1.2 1.9-1 3 1.1.1 2.2-.6 2.9-1.4z"/></svg><span><small>iPhone</small>App Store에서 받기</span></a>
+        <a class="store light" href="#" data-store="android"><svg class="i" viewBox="0 0 24 24" style="fill:currentColor;stroke:none"><path d="M3.6 2.3 13 12l-9.4 9.7c-.4-.2-.6-.7-.6-1.2V3.5c0-.5.2-1 .6-1.2zm11 8.2L5.6 1.6l10.7 6.2-1.7 2.7zm0 3 1.7 2.7L5.6 22.4l9-8.9zm4.9-2.9c.8.5.8 1.7 0 2.2l-2.4 1.4-2-2.3 2-2.3 2.4 1z"/></svg><span><small>Android</small>Google Play에서 받기</span></a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 우하단 QR (데스크톱) -->
+<div class="fab" aria-label="앱 다운로드 QR"><div class="qr" data-qr></div><b>앱 다운로드</b><small>카메라로 스캔하세요</small></div>
+<!-- 최하단 고정 바 (모바일) -->
+<div class="mbar"><button class="btn btn-primary" data-dl><svg class="i" viewBox="0 0 24 24"><path d="M12 4v12M6 11l6 6 6-6M4 20h16"/></svg> 앱 다운로드</button></div>
+
+<div class="ov" data-close></div>
+
+<div class="modal" role="dialog" aria-modal="true" aria-label="앱 다운로드">
+  <button class="x" data-close aria-label="닫기"><svg class="i" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  <h3>QR을 스캔하세요</h3>
+  <p>휴대폰 카메라로 스캔하면<br>앱 스토어로 바로 이동합니다</p>
+  <div class="qr" data-qr></div>
+  <div class="small">아이폰 · 안드로이드 모두 지원</div>
+</div>
+
+<div class="sheet" role="dialog" aria-modal="true" aria-label="앱 다운로드">
+  <div class="grip"></div>
+  <h3>TravelPass 앱 받기</h3>
+  <p>출발 전에 받아두면 도착 즉시 결제할 수 있어요</p>
+  <div class="store-row">
+    <a class="store" href="#" data-store="ios"><svg class="i" viewBox="0 0 24 24" style="fill:currentColor;stroke:none"><path d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.8-1.6 0-3.1 1-4 2.4-1.7 3-.4 7.3 1.2 9.7.8 1.2 1.8 2.5 3.1 2.4 1.2 0 1.7-.8 3.2-.8s1.9.8 3.2.8c1.3 0 2.2-1.2 3-2.4.9-1.4 1.3-2.7 1.3-2.8 0 0-2.6-1-2.7-3.8zM14 5.4c.7-.8 1.1-2 1-3.1-1 0-2.2.7-2.9 1.5-.6.7-1.2 1.9-1 3 1.1.1 2.2-.6 2.9-1.4z"/></svg><span><small>iPhone</small>App Store에서 받기</span></a>
+        <a class="store" href="#" data-store="android"><svg class="i" viewBox="0 0 24 24" style="fill:currentColor;stroke:none"><path d="M3.6 2.3 13 12l-9.4 9.7c-.4-.2-.6-.7-.6-1.2V3.5c0-.5.2-1 .6-1.2zm11 8.2L5.6 1.6l10.7 6.2-1.7 2.7zm0 3 1.7 2.7L5.6 22.4l9-8.9zm4.9-2.9c.8.5.8 1.7 0 2.2l-2.4 1.4-2-2.3 2-2.3 2.4 1z"/></svg><span><small>Android</small>Google Play에서 받기</span></a>
+  </div>
+</div>
+
+<div class="drawer" role="dialog" aria-modal="true" aria-label="메뉴">
+  <div class="top">
+    <a class="logo" href="card-intro.html"><span class="mark"><svg class="i" viewBox="0 0 24 24"><path d="M2 12l19-8-6 18-3-8-10-2z"/></svg></span><span>Travel<em>Pass</em></span></a>
+    <button class="x" data-close aria-label="닫기"><svg class="i" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  </div>
+  <ul>
+    <li><a href="card-intro.html">카드 소개</a></li>
+    <li><a href="benefits.html" class="active">사용처 + 혜택</a></li>
+    <li><a href="#">발급</a></li>
+    <li><a href="card-intro.html#faq">FAQ</a></li>
+  </ul>
+  <div class="bottom">
+    <p>앱 다운로드</p>
+    <div class="store-row">
+      <a class="store" href="#" data-store="ios"><svg class="i" viewBox="0 0 24 24" style="fill:currentColor;stroke:none"><path d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.8-1.6 0-3.1 1-4 2.4-1.7 3-.4 7.3 1.2 9.7.8 1.2 1.8 2.5 3.1 2.4 1.2 0 1.7-.8 3.2-.8s1.9.8 3.2.8c1.3 0 2.2-1.2 3-2.4.9-1.4 1.3-2.7 1.3-2.8 0 0-2.6-1-2.7-3.8zM14 5.4c.7-.8 1.1-2 1-3.1-1 0-2.2.7-2.9 1.5-.6.7-1.2 1.9-1 3 1.1.1 2.2-.6 2.9-1.4z"/></svg><span><small>iPhone</small>App Store에서 받기</span></a>
+        <a class="store" href="#" data-store="android"><svg class="i" viewBox="0 0 24 24" style="fill:currentColor;stroke:none"><path d="M3.6 2.3 13 12l-9.4 9.7c-.4-.2-.6-.7-.6-1.2V3.5c0-.5.2-1 .6-1.2zm11 8.2L5.6 1.6l10.7 6.2-1.7 2.7zm0 3 1.7 2.7L5.6 22.4l9-8.9zm4.9-2.9c.8.5.8 1.7 0 2.2l-2.4 1.4-2-2.3 2-2.3 2.4 1z"/></svg><span><small>Android</small>Google Play에서 받기</span></a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <a class="logo" href="card-intro.html"><span class="mark"><svg class="i" viewBox="0 0 24 24"><path d="M2 12l19-8-6 18-3-8-10-2z"/></svg></span><span>Travel<em>Pass</em></span></a>
+        <p style="margin-top:16px;font-size:15px">한국 생활의 모든 순간을 하나로.</p>
+      </div>
+      <div><h4>TravelPass</h4><ul><li><a href="card-intro.html">서비스 소개</a></li><li><a href="benefits.html">사용처 · 혜택</a></li><li><a href="#">카드 발급방법</a></li></ul></div>
+      <div><h4>도움말</h4><ul><li><a href="card-intro.html#faq">자주 묻는 질문</a></li><li><a href="#">고객센터</a></li><li><a href="#">제휴 문의</a></li></ul></div>
+      <div><h4>언어</h4><ul><li><a href="#">English</a></li><li><a href="#">日本語</a></li><li><a href="#">中文(简体)</a></li></ul></div>
+    </div>
+    <div class="bottom"><span>© 2025 TravelPass. 모든 권리 보유.</span><span>개인정보처리방침 · 이용약관</span></div>
+  </div>
+</footer>
+
+<script src="assets/site.js?v=7"></script>
+</body>
+</html>

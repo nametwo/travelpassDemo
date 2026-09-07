@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TravelPass | 카드 소개</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css?v=21">
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="logo" href="card-intro.html"><span class="mark"><svg class="i" viewBox="0 0 24 24"><path d="M2 12l19-8-6 18-3-8-10-2z"/></svg></span><span>Travel<em>Pass</em></span></a>
+    <nav aria-label="주요 메뉴"><ul>
+      <li><a href="card-intro.html" class="active">카드 소개</a></li>
+      <li><a href="benefits.html">사용처 + 혜택</a></li>
+      <li><a href="#">발급</a></li>
+      <li><a href="card-intro.html#faq">FAQ</a></li>
+    </ul></nav>
+    <div class="hright">
+      <button class="btn btn-outline btn-sm" data-dl><svg class="i" viewBox="0 0 24 24"><path d="M12 4v12M6 11l6 6 6-6M4 20h16"/></svg> 앱 다운 받기</button>
+      <button class="lang" aria-label="언어 선택"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></svg> KO <svg class="i" viewBox="0 0 24 24" style="width:1em;height:1em"><path d="M6 9l6 6 6-6"/></svg></button>
+      <button class="burger" aria-label="메뉴 열기" data-menu><svg class="i" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<!-- 1. 첫화면: 전체화면 영상 -->
+<section class="hero" data-first>
+  <video class="hero-video" autoplay muted loop playsinline aria-hidden="true">
+    <source src="assets/hero.mp4" type="video/mp4">
+  </video>
+  <div class="hero-shade"></div>
+  <div class="wrap">
+    <h1>ONE PASS.<br><span class="o">COMPLETE</span><br>KOREA.</h1>
+    <p class="lead">출발 전에 준비 끝.<br>도착하면 바로 결제.</p>
+    <div class="cta"><button class="btn btn-primary" data-dl><svg class="i" viewBox="0 0 24 24"><path d="M12 4v12M6 11l6 6 6-6M4 20h16"/></svg> 앱 다운로드</button></div>
+  </div>
+  <span class="asset-note">배경 영상 자리 · assets/hero.mp4</span>
+</section>
+
+<!-- 2. 앱 결제 -->
+<section class="bg-white">
+  <div class="wrap reveal">
+    <h2>한국 사람이 쓰는 앱, 그대로</h2>
+    <p class="lead">외국인이라서 막히던 앱, 이제 됩니다</p>
+    <div class="marquee" aria-label="결제 가능한 주요 앱">
+      <div class="marquee-track">
+        <div class="marks"><span>카카오T<small>택시</small></span><span>배달의민족<small>배달</small></span><span>코레일톡<small>기차표</small></span><span>쿠팡<small>쇼핑</small></span><span>네이버 예약<small>맛집 · 숙소</small></span><span>야놀자<small>호텔 · 레저</small></span><span>K.ride<small>택시 호출</small></span><span>티머니<small>교통</small></span><span>쿠팡이츠<small>배달</small></span><span>무신사<small>패션</small></span><span>올리브영<small>뷰티</small></span><span>NOL<small>공연</small></span><span>JUMP<small>입장권</small></span></div>
+        <div class="marks" aria-hidden="true"><span>카카오T<small>택시</small></span><span>배달의민족<small>배달</small></span><span>코레일톡<small>기차표</small></span><span>쿠팡<small>쇼핑</small></span><span>네이버 예약<small>맛집 · 숙소</small></span><span>야놀자<small>호텔 · 레저</small></span><span>K.ride<small>택시 호출</small></span><span>티머니<small>교통</small></span><span>쿠팡이츠<small>배달</small></span><span>무신사<small>패션</small></span><span>올리브영<small>뷰티</small></span><span>NOL<small>공연</small></span><span>JUMP<small>입장권</small></span></div>
+      </div>
+    </div>
+    <p style="margin-top:32px"><a class="link" href="benefits.html">사용처 + 혜택 더보기 <svg class="i" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></p>
+  </div>
+</section>
+
+<!-- 3. 발급 → 수령: 자동 진행 스테퍼 -->
+<section class="bg-cream" id="issue">
+  <div class="wrap reveal">
+    <div class="stepper" data-stepper data-interval="3500">
+      <div class="st-left">
+      <h2>출발 전에 발급,<br>공항에서 수령</h2>
+      <p class="lead">가입부터 충전까지 앱에서 끝내고, 공항에서는 받기만 하세요</p>
+      <ol class="st-track">
+        <li class="st on"><button class="st-n" aria-label="1단계 앱 가입">1</button><span class="st-bar"><i></i></span><h3>앱 가입</h3><p>여권만으로 본인인증 · 한국 번호 불필요</p></li>
+        <li class="st"><button class="st-n" aria-label="2단계 모바일카드 즉시 발급">2</button><span class="st-bar"><i></i></span><h3>모바일카드 즉시 발급</h3><p>인증 끝나면 바로 · 온라인 결제 시작</p></li>
+        <li class="st"><button class="st-n" aria-label="3단계 충전">3</button><span class="st-bar"><i></i></span><h3>충전</h3><p>내 나라 통화로 앱에서 미리</p></li>
+        <li class="st"><button class="st-n" aria-label="4단계 공항에서 수령"><svg class="i" viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></button><h3>공항에서 수령</h3><p>실물카드 받고 오프라인까지</p><div class="pins"><span class="chip">인천 T1</span><span class="chip">인천 T2</span><span class="chip">김포</span><span class="chip">부산</span></div></li>
+      </ol>
+      </div>
+      <div class="st-panel">
+      <div class="st-shot on" data-src="assets/app/step-1.png">
+        <div class="device"><div class="screen"><img src="assets/app/step-1.png" alt="" aria-label="앱 가입 화면"><div class="ph"><b>앱 가입</b><span>앱 스크린샷 자리</span><code>assets/app/step-1.png</code></div></div></div>
+      </div>
+      <div class="st-shot" data-src="assets/app/step-2.png">
+        <div class="device"><div class="screen"><img src="assets/app/step-2.png" alt="" aria-label="모바일카드 발급 화면"><div class="ph"><b>모바일카드 발급</b><span>앱 스크린샷 자리</span><code>assets/app/step-2.png</code></div></div></div>
+      </div>
+      <div class="st-shot" data-src="assets/app/step-3.png">
+        <div class="device"><div class="screen"><img src="assets/app/step-3.png" alt="" aria-label="충전 화면"><div class="ph"><b>충전</b><span>앱 스크린샷 자리</span><code>assets/app/step-3.png</code></div></div></div>
+      </div>
+        <div class="st-shot st-final"><span>도착하면 바로 결제</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. 충전 · 환불: 중앙 문구 + 주변에 통화 동전 · 결제수단 -->
+<section class="bg-white">
+  <div class="wrap reveal">
+    <div class="orbit">
+      <div class="fl" style="--x:4%;--y:14%;--fd:0.0s"><div class="coin" style="--size:112px;--d:0.0s" aria-label="미국 달러"><span class="face front">$</span><i style="--z:-1.6px"></i><i style="--z:-3.2px"></i><i style="--z:-4.800000000000001px"></i><i style="--z:-6.4px"></i><i style="--z:-8.0px"></i><i style="--z:-9.600000000000001px"></i><span class="face back">$</span></div></div>
+      <div class="fl" style="--x:15%;--y:58%;--fd:-0.9s"><div class="coin" style="--size:96px;--d:-1.4s" aria-label="유로"><span class="face front">€</span><i style="--z:-1.6px"></i><i style="--z:-3.2px"></i><i style="--z:-4.800000000000001px"></i><i style="--z:-6.4px"></i><i style="--z:-8.0px"></i><i style="--z:-9.600000000000001px"></i><span class="face back">€</span></div></div>
+      <div class="fl" style="--x:27%;--y:6%;--fd:-1.8s"><div class="coin" style="--size:104px;--d:-2.8s" aria-label="영국 파운드"><span class="face front">£</span><i style="--z:-1.6px"></i><i style="--z:-3.2px"></i><i style="--z:-4.800000000000001px"></i><i style="--z:-6.4px"></i><i style="--z:-8.0px"></i><i style="--z:-9.600000000000001px"></i><span class="face back">£</span></div></div>
+      <div class="fl" style="--x:50%;--y:2%;--fd:-2.7s"><div class="coin hl" style="--size:128px;--d:-4.2s" aria-label="대한민국 원"><span class="face front">₩</span><i style="--z:-1.6px"></i><i style="--z:-3.2px"></i><i style="--z:-4.800000000000001px"></i><i style="--z:-6.4px"></i><i style="--z:-8.0px"></i><i style="--z:-9.600000000000001px"></i><span class="face back">₩</span></div></div>
+      <div class="fl" style="--x:72%;--y:8%;--fd:-3.6s"><div class="coin" style="--size:104px;--d:-5.6s" aria-label="일본 엔"><span class="face front">¥</span><i style="--z:-1.6px"></i><i style="--z:-3.2px"></i><i style="--z:-4.800000000000001px"></i><i style="--z:-6.4px"></i><i style="--z:-8.0px"></i><i style="--z:-9.600000000000001px"></i><span class="face back">¥</span></div></div>
+      <div class="fl" style="--x:85%;--y:54%;--fd:-4.5s"><div class="coin" style="--size:96px;--d:-7.0s" aria-label="태국 바트"><span class="face front">฿</span><i style="--z:-1.6px"></i><i style="--z:-3.2px"></i><i style="--z:-4.800000000000001px"></i><i style="--z:-6.4px"></i><i style="--z:-8.0px"></i><i style="--z:-9.600000000000001px"></i><span class="face back">฿</span></div></div>
+      <div class="fl" style="--x:95%;--y:18%;--fd:-5.4s"><div class="coin" style="--size:112px;--d:-8.4s" aria-label="베트남 동"><span class="face front">₫</span><i style="--z:-1.6px"></i><i style="--z:-3.2px"></i><i style="--z:-4.800000000000001px"></i><i style="--z:-6.4px"></i><i style="--z:-8.0px"></i><i style="--z:-9.600000000000001px"></i><span class="face back">₫</span></div></div>
+      <div class="fl" style="--x:3%;--y:72%;--fd:-6.3s"><div class="pcard" style="--r:-6deg"><b>VISA</b><small>신용카드</small></div></div>
+      <div class="fl" style="--x:17%;--y:88%;--fd:-7.2s"><div class="pcard" style="--r:4deg"><b>Mastercard</b><small>신용카드</small></div></div>
+      <div class="fl" style="--x:47%;--y:94%;--fd:-8.1s"><div class="pcard" style="--r:-2deg"><b>Alipay</b><small>간편결제</small></div></div>
+      <div class="fl" style="--x:71%;--y:90%;--fd:-9.0s"><div class="pcard" style="--r:5deg"><b>JCB</b><small>신용카드</small></div></div>
+      <div class="fl" style="--x:88%;--y:70%;--fd:-9.9s"><div class="pcard" style="--r:-4deg"><b>PayPal</b><small>간편결제</small></div></div>
+      <div class="orbit-txt">
+        <h2>내 나라 통화로 충전,<br>앱에서 바로</h2>
+        <p class="lead">여행 끝나면 실시간 환불, 원화 수수료 0원</p>
+        <p class="small orbit-note">177개국 통화 · 신용카드 · PayPal · Alipay로 충전<br>편의점 56,000곳 · 은행 ATM 28,000곳에서 현금 충전</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. 교통: 단말기 태그 장면 -->
+<div class="band bg-ink statement">
+  <div class="wrap split reveal">
+    <div>
+      <h2>교통카드 내장</h2>
+      <p class="lead">전국 모든 지하철 · 버스 · 택시, 카드 한 장으로</p>
+    </div>
+    <div class="tap" data-tap aria-label="카드를 단말기에 대면 승인되는 장면">
+      <div class="terminal">
+        <div class="t-screen">
+          <span class="t-idle">카드 또는 휴대폰을<br>대 주세요</span>
+          <span class="t-ok"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="21"/><path class="tick" d="M14 25l7 7 13-14"/></svg>승인</span>
+        </div>
+        <div class="t-pad">
+          <i class="ring"></i><i class="ring"></i><i class="ring"></i>
+          <svg class="nfc" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9a8 8 0 0 1 12 0M8.5 12a4.5 4.5 0 0 1 7 0M11 15a1.5 1.5 0 0 1 2 0"/></svg>
+        </div>
+      </div>
+      <div class="t-card"><img src="assets/card-front.png" alt="TravelPass 카드"></div>
+    </div>
+  </div>
+</div>
+
+<!-- 6. 앱: 가로 카드 캐러셀 -->
+<section class="bg-white app-deck">
+  <div class="wrap reveal">
+    <h2>이 모든 걸, 앱 하나로</h2>
+    <p class="lead">발급 · 충전 · 교통, 그리고 여행과 생활까지</p>
+  </div>
+  <div class="deck" data-deck data-interval="5000">
+    <div class="deck-track" tabindex="0" aria-label="앱 기능 카드. 좌우로 넘겨 보세요">
+      <article class="dcard t-ink">
+        <div class="dtxt"><h3>지갑</h3><p>잔액 확인, 충전, 환불을 한 화면에서</p></div>
+        <div class="dshot"><div class="device"><div class="screen"><img src="assets/app/wallet.png" alt="" aria-label="TravelPass 앱 지갑 화면"><div class="ph"><b>지갑 화면</b><span>앱 스크린샷 자리</span><code>assets/app/wallet.png</code></div></div></div></div>
+      </article>
+      <article class="dcard t-grad">
+        <div class="dtxt"><h3>결제</h3><p>QR 하나로 매장에서, 카드번호로 앱에서</p></div>
+        <div class="dshot"><div class="device"><div class="screen"><img src="assets/app/pay.png" alt="" aria-label="TravelPass 앱 결제 화면"><div class="ph"><b>결제 화면</b><span>앱 스크린샷 자리</span><code>assets/app/pay.png</code></div></div></div></div>
+      </article>
+      <article class="dcard t-light">
+        <div class="dtxt"><h3>여행</h3><p>명소 추천부터 호텔·공연 예약까지</p></div>
+        <div class="dshot"><div class="device"><div class="screen"><img src="assets/app/travel.png" alt="" aria-label="TravelPass 앱 여행 화면"><div class="ph"><b>여행 화면</b><span>앱 스크린샷 자리</span><code>assets/app/travel.png</code></div></div></div></div>
+      </article>
+      <article class="dcard t-ink">
+        <div class="dtxt"><h3>생활</h3><p>배달, 쇼핑, 외국인 커뮤니티</p></div>
+        <div class="dshot"><div class="device"><div class="screen"><img src="assets/app/living.png" alt="" aria-label="TravelPass 앱 생활 화면"><div class="ph"><b>생활 화면</b><span>앱 스크린샷 자리</span><code>assets/app/living.png</code></div></div></div></div>
+      </article>
+      <article class="dcard t-grad">
+        <div class="dtxt"><h3>교통</h3><p>교통카드 잔액 확인하고 바로 충전</p></div>
+        <div class="dshot"><div class="device"><div class="screen"><img src="assets/app/transit.png" alt="" aria-label="TravelPass 앱 교통 화면"><div class="ph"><b>교통 화면</b><span>앱 스크린샷 자리</span><code>assets/app/transit.png</code></div></div></div></div>
+      </article>
+    </div>
+    <div class="deck-ctl">
+      <button class="dbtn" data-prev aria-label="이전"><svg class="i" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></button>
+      <div class="dots" role="tablist"></div>
+      <button class="dbtn" data-next aria-label="다음"><svg class="i" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>
+      <button class="dbtn dplay" data-play aria-label="자동 재생 멈춤"><svg class="i ic-pause" viewBox="0 0 24 24"><path d="M8 5v14M16 5v14"/></svg><svg class="i ic-play" viewBox="0 0 24 24"><path d="M7 5l12 7-12 7z"/></svg></button>
+    </div>
+  </div>
+</section>
+
+<!-- 7. 후기 (원문 확보 전) -->
+<section class="bg-cream">
+  <div class="wrap reveal">
+    <h2>먼저 써본 사람들의 이야기</h2>
+    <div class="slot"><b>실제 사용자 후기 자리</b>후기 원문을 받으면 이 자리에 5~6개를 넣습니다</div>
+  </div>
+</section>
+
+<!-- 8. 비교표 -->
+<section class="bg-white cmp" id="compare">
+  <div class="wrap reveal">
+    <h2>아직 고민된다면</h2>
+    <table>
+      <thead><tr><th scope="col"></th><th scope="col" class="us">Travel Pass</th><th scope="col">일반 여행카드</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">앱 결제</th><td class="us"><span class="ok">배민 · 카카오T 등 주요 앱 결제</span></td><td class="them"><span class="no">앱 등록 불가</span></td></tr>
+        <tr><th scope="row">충전</th><td class="us"><span class="ok">177개국 온라인 충전</span><br><span class="ok">편의점 56,000 · 은행 ATM 28,000</span></td><td class="them"><span class="no">전용 키오스크</span></td></tr>
+        <tr><th scope="row">사용 범위</th><td class="us"><span class="ok">전국 가맹점 · 교통 · 쇼핑 · 숙박 · 관광</span></td><td class="them"><span class="no">일부 가맹점</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- 9. FAQ -->
+<section class="bg-cream" id="faq">
+  <div class="wrap reveal">
+    <h2>자주 묻는 질문</h2>
+    <div class="faq-list">
+      <details open><summary>한국 전화번호가 없어도 가입할 수 있나요?<svg class="i" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></summary><p>네. 여권만으로 본인인증이 가능하며, 한국 전화번호는 필요하지 않습니다.</p></details>
+      <details><summary>카드는 어디에서 받을 수 있나요?<svg class="i" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></summary><p>인천공항 T1 · T2, 김포공항, 부산(김해)공항 환전소에서 수령할 수 있습니다. 앱에서 발급 신청 후 도착 시 바로 받아가세요.</p></details>
+      <details><summary>충전은 어떻게 하나요?<svg class="i" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></summary><p>앱에서 177개국 통화로 온라인 충전하거나, 전국 편의점 56,000곳과 은행 ATM 28,000곳에서 현금으로 충전할 수 있습니다.</p></details>
+      <details><summary>남은 잔액은 환불되나요?<svg class="i" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></summary><p>여행이 끝나면 앱에서 바로 환불 신청할 수 있습니다. 원화 환불 수수료는 0원입니다.</p></details>
+      <details><summary>배달앱이나 택시앱에 등록해서 쓸 수 있나요?<svg class="i" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></summary><p>네. 배달의민족, 카카오T 등 주요 앱에 카드번호를 등록하면 한국 사람과 동일하게 결제할 수 있습니다.</p></details>
+      <details><summary>교통카드는 따로 사야 하나요?<svg class="i" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></summary><p>아니요. Travel Pass 카드에 교통카드 기능이 내장되어 있어 지하철 · 버스 · 택시를 바로 이용할 수 있습니다.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- 10. 강조 -->
+<section class="bg-white emph">
+  <div class="wrap reveal"><h2>외국인도,<br><span class="o">한국인처럼.</span></h2></div>
+</section>
+
+<!-- 다운로드 띠: 데스크톱 QR / 모바일 딥링크 -->
+<div class="band bg-orange dl" id="download">
+  <div class="wrap reveal">
+    <h2>출발 전에 받아두세요</h2>
+        <div class="cta only-d">
+      <div class="qr" data-qr></div>
+      <span class="small" style="color:rgba(255,255,255,.8)">카메라로 QR을 스캔하면 앱 스토어로 이동합니다</span>
+    </div>
+    <div class="cta only-m">
+      <div class="store-row">
+        <a class="store light" href="#" data-store="ios"><svg class="i" viewBox="0 0 24 24" style="fill:currentColor;stroke:none"><path d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.8-1.6 0-3.1 1-4 2.4-1.7 3-.4 7.3 1.2 9.7.8 1.2 1.8 2.5 3.1 2.4 1.2 0 1.7-.8 3.2-.8s1.9.8 3.2.8c1.3 0 2.2-1.2 3-2.4.9-1.4 1.3-2.7 1.3-2.8 0 0-2.6-1-2.7-3.8zM14 5.4c.7-.8 1.1-2 1-3.1-1 0-2.2.7-2.9 1.5-.6.7-1.2 1.9-1 3 1.1.1 2.2-.6 2.9-1.4z"/></svg><span><small>iPhone</small>App Store에서 받기</span></a>
+        <a class="store light" href="#" data-store="android"><svg class="i" viewBox="0 0 24 24" style="fill:currentColor;stroke:none"><path d="M3.6 2.3 13 12l-9.4 9.7c-.4-.2-.6-.7-.6-1.2V3.5c0-.5.2-1 .6-1.2zm11 8.2L5.6 1.6l10.7 6.2-1.7 2.7zm0 3 1.7 2.7L5.6 22.4l9-8.9zm4.9-2.9c.8.5.8 1.7 0 2.2l-2.4 1.4-2-2.3 2-2.3 2.4 1z"/></svg><span><small>Android</small>Google Play에서 받기</span></a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 우하단 QR (데스크톱) -->
+<div class="fab" aria-label="앱 다운로드 QR"><div class="qr" data-qr></div><b>앱 다운로드</b><small>카메라로 스캔하세요</small></div>
+<!-- 최하단 고정 바 (모바일) -->
+<div class="mbar"><button class="btn btn-primary" data-dl><svg class="i" viewBox="0 0 24 24"><path d="M12 4v12M6 11l6 6 6-6M4 20h16"/></svg> 앱 다운로드</button></div>
+
+<div class="ov" data-close></div>
+
+<div class="modal" role="dialog" aria-modal="true" aria-label="앱 다운로드">
+  <button class="x" data-close aria-label="닫기"><svg class="i" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  <h3>QR을 스캔하세요</h3>
+  <p>휴대폰 카메라로 스캔하면<br>앱 스토어로 바로 이동합니다</p>
+  <div class="qr" data-qr></div>
+  <div class="small">아이폰 · 안드로이드 모두 지원</div>
+</div>
+
+<div class="sheet" role="dialog" aria-modal="true" aria-label="앱 다운로드">
+  <div class="grip"></div>
+  <h3>TravelPass 앱 받기</h3>
+  <p>출발 전에 받아두면 도착 즉시 결제할 수 있어요</p>
+  <div class="store-row">
+    <a class="store" href="#" data-store="ios"><svg class="i" viewBox="0 0 24 24" style="fill:currentColor;stroke:none"><path d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.8-1.6 0-3.1 1-4 2.4-1.7 3-.4 7.3 1.2 9.7.8 1.2 1.8 2.5 3.1 2.4 1.2 0 1.7-.8 3.2-.8s1.9.8 3.2.8c1.3 0 2.2-1.2 3-2.4.9-1.4 1.3-2.7 1.3-2.8 0 0-2.6-1-2.7-3.8zM14 5.4c.7-.8 1.1-2 1-3.1-1 0-2.2.7-2.9 1.5-.6.7-1.2 1.9-1 3 1.1.1 2.2-.6 2.9-1.4z"/></svg><span><small>iPhone</small>App Store에서 받기</span></a>
+        <a class="store" href="#" data-store="android"><svg class="i" viewBox="0 0 24 24" style="fill:currentColor;stroke:none"><path d="M3.6 2.3 13 12l-9.4 9.7c-.4-.2-.6-.7-.6-1.2V3.5c0-.5.2-1 .6-1.2zm11 8.2L5.6 1.6l10.7 6.2-1.7 2.7zm0 3 1.7 2.7L5.6 22.4l9-8.9zm4.9-2.9c.8.5.8 1.7 0 2.2l-2.4 1.4-2-2.3 2-2.3 2.4 1z"/></svg><span><small>Android</small>Google Play에서 받기</span></a>
+  </div>
+</div>
+
+<div class="drawer" role="dialog" aria-modal="true" aria-label="메뉴">
+  <div class="top">
+    <a class="logo" href="card-intro.html"><span class="mark"><svg class="i" viewBox="0 0 24 24"><path d="M2 12l19-8-6 18-3-8-10-2z"/></svg></span><span>Travel<em>Pass</em></span></a>
+    <button class="x" data-close aria-label="닫기"><svg class="i" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  </div>
+  <ul>
+    <li><a href="card-intro.html" class="active">카드 소개</a></li>
+    <li><a href="benefits.html">사용처 + 혜택</a></li>
+    <li><a href="#">발급</a></li>
+    <li><a href="card-intro.html#faq">FAQ</a></li>
+  </ul>
+  <div class="bottom">
+    <p>앱 다운로드</p>
+    <div class="store-row">
+      <a class="store" href="#" data-store="ios"><svg class="i" viewBox="0 0 24 24" style="fill:currentColor;stroke:none"><path d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.8-1.6 0-3.1 1-4 2.4-1.7 3-.4 7.3 1.2 9.7.8 1.2 1.8 2.5 3.1 2.4 1.2 0 1.7-.8 3.2-.8s1.9.8 3.2.8c1.3 0 2.2-1.2 3-2.4.9-1.4 1.3-2.7 1.3-2.8 0 0-2.6-1-2.7-3.8zM14 5.4c.7-.8 1.1-2 1-3.1-1 0-2.2.7-2.9 1.5-.6.7-1.2 1.9-1 3 1.1.1 2.2-.6 2.9-1.4z"/></svg><span><small>iPhone</small>App Store에서 받기</span></a>
+        <a class="store" href="#" data-store="android"><svg class="i" viewBox="0 0 24 24" style="fill:currentColor;stroke:none"><path d="M3.6 2.3 13 12l-9.4 9.7c-.4-.2-.6-.7-.6-1.2V3.5c0-.5.2-1 .6-1.2zm11 8.2L5.6 1.6l10.7 6.2-1.7 2.7zm0 3 1.7 2.7L5.6 22.4l9-8.9zm4.9-2.9c.8.5.8 1.7 0 2.2l-2.4 1.4-2-2.3 2-2.3 2.4 1z"/></svg><span><small>Android</small>Google Play에서 받기</span></a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <a class="logo" href="card-intro.html"><span class="mark"><svg class="i" viewBox="0 0 24 24"><path d="M2 12l19-8-6 18-3-8-10-2z"/></svg></span><span>Travel<em>Pass</em></span></a>
+        <p style="margin-top:16px;font-size:15px">한국 생활의 모든 순간을 하나로.</p>
+      </div>
+      <div><h4>TravelPass</h4><ul><li><a href="card-intro.html">서비스 소개</a></li><li><a href="benefits.html">사용처 · 혜택</a></li><li><a href="#">카드 발급방법</a></li></ul></div>
+      <div><h4>도움말</h4><ul><li><a href="card-intro.html#faq">자주 묻는 질문</a></li><li><a href="#">고객센터</a></li><li><a href="#">제휴 문의</a></li></ul></div>
+      <div><h4>언어</h4><ul><li><a href="#">English</a></li><li><a href="#">日本語</a></li><li><a href="#">中文(简体)</a></li></ul></div>
+    </div>
+    <div class="bottom"><span>© 2025 TravelPass. 모든 권리 보유.</span><span>개인정보처리방침 · 이용약관</span></div>
+  </div>
+</footer>
+
+<script src="assets/site.js?v=11"></script>
+</body>
+</html>
