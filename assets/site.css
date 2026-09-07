@@ -170,6 +170,15 @@ nav a.active{color:var(--orange);border-color:var(--orange)}
 }
 @media(prefers-reduced-motion:reduce){.fl{animation:none}}
 
+/* 스펙 숫자 띠 + 대상 */
+.specs{display:grid;grid-template-columns:repeat(4,1fr);margin-top:var(--s7);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.specs div{padding:var(--s4) var(--s3);border-right:1px solid var(--line)}
+.specs div:last-child{border-right:0}
+.specs b{display:block;font-size:clamp(28px,3.2vw,44px);font-weight:900;letter-spacing:-.04em;line-height:1.1}
+.specs span{display:block;font-size:14px;color:var(--muted);margin-top:6px;word-break:keep-all}
+.who{text-align:center;margin-top:var(--s4)}
+@media(max-width:860px){.specs{grid-template-columns:1fr 1fr}.specs div{border-bottom:1px solid var(--line)}.specs div:nth-child(2n){border-right:0}.specs div:nth-last-child(-n+2){border-bottom:0}}
+
 /* 통화 동전 (CSS 3D, Y축 회전) */
 .coins{display:flex;justify-content:center;gap:var(--s5);perspective:1200px;margin-bottom:var(--s7)}
 .coins:hover .coin{animation-play-state:paused}
