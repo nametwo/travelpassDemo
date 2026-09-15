@@ -6,7 +6,7 @@
 <title>TravelPass | 카드 소개</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/site.css?v=21">
+<link rel="stylesheet" href="assets/site.css?v=37">
 </head>
 <body>
 <header>
@@ -41,21 +41,22 @@
 </section>
 
 <!-- 3. 발급 → 수령: 자동 진행 스테퍼 -->
-<section class="bg-cream" id="issue">
+<section class="bg-white pb" id="issue">
   <div class="wrap reveal">
     <div class="stepper" data-stepper data-interval="3500">
       <div class="st-left">
       <h2>출발 전에 발급,<br>공항에서 수령</h2>
       <p class="lead">가입부터 충전까지 앱에서 끝내고, 공항에서는 받기만 하세요</p>
       <ol class="st-track">
-        <li class="st on"><button class="st-n" aria-label="1단계 여권으로 본인인증">1</button><span class="st-bar"><i></i></span><h3>여권으로 본인인증</h3><p>한국 번호 불필요 · 인증 끝나면 모바일카드 바로</p></li>
-        <li class="st"><button class="st-n" aria-label="2단계 충전">2</button><span class="st-bar"><i></i></span><h3>충전</h3><p>쓰던 카드로 앱에서 미리</p></li>
-        <li class="st"><button class="st-n" aria-label="3단계 공항에서 수령">3</button><span class="st-bar"><i></i></span><h3>공항에서 수령</h3><p>실물카드 받고 오프라인까지</p><div class="pins"><span class="chip">인천 T1</span><span class="chip">인천 T2</span><span class="chip">김포</span><span class="chip">부산</span></div></li>
-        <li class="st"><button class="st-n" aria-label="4단계 사용"><svg class="i" viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></button><h3>사용</h3><p>매장 결제 · 앱 결제 · 교통, 한국인과 똑같이</p></li>
+        <li class="st on"><button class="st-n st-ic" aria-label="1단계 여권으로 본인인증"><span class="ic-slot" data-icon="passport"></span></button><span class="st-bar"><i></i></span><h3>여권으로 본인인증</h3><p>한국 번호 불필요 · 인증 끝나면 모바일카드 바로</p></li>
+        <li class="st"><button class="st-n st-ic" aria-label="2단계 충전"><span class="ic-slot" data-icon="topup"></span></button><span class="st-bar"><i></i></span><h3>충전</h3><p>쓰던 카드로 앱에서 미리</p></li>
+        <li class="st"><button class="st-n st-ic" aria-label="3단계 공항에서 수령"><span class="ic-slot" data-icon="airport"></span></button><span class="st-bar"><i></i></span><h3>공항에서 수령</h3><p>실물카드 받고 오프라인까지</p><div class="pins"><span class="chip">인천 T1</span><span class="chip">인천 T2</span><span class="chip">김포</span><span class="chip">부산</span></div></li>
+        <li class="st"><button class="st-n st-ic" aria-label="4단계 사용"><span class="ic-slot" data-icon="tap"></span></button><h3>사용</h3><p>매장 결제 · 앱 결제 · 교통, 한국인과 똑같이</p></li>
       </ol>
       <p style="margin-top:32px"><a class="link" href="issue.html">발급 자세히 보기 <svg class="i" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></p>
       </div>
       <div class="st-panel">
+        <svg class="bg-mark" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12l19-8-6 18-3-8-10-2z"/></svg>
       <div class="st-shot on" data-src="assets/app/step-1.png">
         <div class="device"><div class="screen"><img src="assets/app/step-1.png" alt="" aria-label="본인인증 화면"><div class="ph"><b>여권 본인인증</b><span>앱 스크린샷 자리</span><code>assets/app/step-1.png</code></div></div></div>
       </div>
@@ -75,18 +76,12 @@
 <section class="bg-white">
   <div class="wrap reveal">
     <div class="orbit">
-      <div class="fl" style="--x:4%;--y:14%;--fd:0.0s"><div class="coin" style="--size:112px;--d:0.0s" aria-label="미국 달러"><span class="face front">$</span><i style="--z:-1.6px"></i><i style="--z:-3.2px"></i><i style="--z:-4.800000000000001px"></i><i style="--z:-6.4px"></i><i style="--z:-8.0px"></i><i style="--z:-9.600000000000001px"></i><span class="face back">$</span></div></div>
-      <div class="fl" style="--x:15%;--y:58%;--fd:-0.9s"><div class="coin" style="--size:96px;--d:-1.4s" aria-label="유로"><span class="face front">€</span><i style="--z:-1.6px"></i><i style="--z:-3.2px"></i><i style="--z:-4.800000000000001px"></i><i style="--z:-6.4px"></i><i style="--z:-8.0px"></i><i style="--z:-9.600000000000001px"></i><span class="face back">€</span></div></div>
-      <div class="fl" style="--x:27%;--y:6%;--fd:-1.8s"><div class="coin" style="--size:104px;--d:-2.8s" aria-label="영국 파운드"><span class="face front">£</span><i style="--z:-1.6px"></i><i style="--z:-3.2px"></i><i style="--z:-4.800000000000001px"></i><i style="--z:-6.4px"></i><i style="--z:-8.0px"></i><i style="--z:-9.600000000000001px"></i><span class="face back">£</span></div></div>
-      <div class="fl" style="--x:50%;--y:2%;--fd:-2.7s"><div class="coin hl" style="--size:128px;--d:-4.2s" aria-label="대한민국 원"><span class="face front">₩</span><i style="--z:-1.6px"></i><i style="--z:-3.2px"></i><i style="--z:-4.800000000000001px"></i><i style="--z:-6.4px"></i><i style="--z:-8.0px"></i><i style="--z:-9.600000000000001px"></i><span class="face back">₩</span></div></div>
-      <div class="fl" style="--x:72%;--y:8%;--fd:-3.6s"><div class="coin" style="--size:104px;--d:-5.6s" aria-label="일본 엔"><span class="face front">¥</span><i style="--z:-1.6px"></i><i style="--z:-3.2px"></i><i style="--z:-4.800000000000001px"></i><i style="--z:-6.4px"></i><i style="--z:-8.0px"></i><i style="--z:-9.600000000000001px"></i><span class="face back">¥</span></div></div>
-      <div class="fl" style="--x:85%;--y:54%;--fd:-4.5s"><div class="coin" style="--size:96px;--d:-7.0s" aria-label="태국 바트"><span class="face front">฿</span><i style="--z:-1.6px"></i><i style="--z:-3.2px"></i><i style="--z:-4.800000000000001px"></i><i style="--z:-6.4px"></i><i style="--z:-8.0px"></i><i style="--z:-9.600000000000001px"></i><span class="face back">฿</span></div></div>
-      <div class="fl" style="--x:95%;--y:18%;--fd:-5.4s"><div class="coin" style="--size:112px;--d:-8.4s" aria-label="베트남 동"><span class="face front">₫</span><i style="--z:-1.6px"></i><i style="--z:-3.2px"></i><i style="--z:-4.800000000000001px"></i><i style="--z:-6.4px"></i><i style="--z:-8.0px"></i><i style="--z:-9.600000000000001px"></i><span class="face back">₫</span></div></div>
-      <div class="fl" style="--x:3%;--y:72%;--fd:-6.3s"><div class="pcard" style="--r:-6deg"><b>VISA</b><small>신용 · 체크</small></div></div>
-      <div class="fl" style="--x:17%;--y:88%;--fd:-7.2s"><div class="pcard" style="--r:4deg"><b>Mastercard</b><small>신용 · 체크</small></div></div>
-      <div class="fl" style="--x:47%;--y:94%;--fd:-8.1s"><div class="pcard" style="--r:-2deg"><b>Alipay</b><small>간편결제</small></div></div>
-      <div class="fl" style="--x:71%;--y:90%;--fd:-9.0s"><div class="pcard" style="--r:5deg"><b>JCB</b><small>신용 · 체크</small></div></div>
-      <div class="fl" style="--x:88%;--y:70%;--fd:-9.9s"><div class="pcard" style="--r:-4deg"><b>PayPal</b><small>간편결제</small></div></div>
+      <div class="fl" style="--x:56%;--y:4%;--fd:0.0s"><div class="orb orb-ink" style="--size:200px" aria-label="미국 달러"><span>$</span></div></div>
+      <div class="fl" style="--x:8%;--y:14%;--fd:-1.1s"><div class="orb orb-light" style="--size:150px" aria-label="일본 엔"><span>¥</span></div></div>
+      <div class="fl" style="--x:92%;--y:20%;--fd:-2.2s"><div class="orb orb-light" style="--size:130px" aria-label="중국 위안"><span>元</span></div></div>
+      <div class="fl" style="--x:6%;--y:78%;--fd:-3.3s"><div class="orb orb-white" style="--size:140px" aria-label="VISA"><span>VISA</span></div></div>
+      <div class="fl" style="--x:90%;--y:76%;--fd:-4.4s"><div class="orb orb-white" style="--size:160px" aria-label="Mastercard"><span>Mastercard</span></div></div>
+      <div class="fl" style="--x:50%;--y:96%;--fd:-5.5s"><div class="orb orb-white" style="--size:120px" aria-label="PayPal"><span>PayPal</span></div></div>
       <div class="orbit-txt">
         <h2>쓰던 카드로 충전,<br>앱에서 바로</h2>
         <p class="lead">여행 끝나면 실시간 환불, 원화 수수료 0원</p>
@@ -104,6 +99,9 @@
 
 <!-- 5. 교통: 단말기 태그 장면 -->
 <div class="band bg-ink statement">
+  <svg class="bg-mark-train" viewBox="0 0 200 140" aria-hidden="true">
+    <path d="M40 10h120a24 24 0 0 1 24 24v70a16 16 0 0 1-16 16H32a16 16 0 0 1-16-16V34a24 24 0 0 1 24-24zM48 30a10 10 0 0 0-10 10v28a10 10 0 0 0 10 10h104a10 10 0 0 0 10-10V40a10 10 0 0 0-10-10zM40 92a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm120 0a10 10 0 1 0 0 20 10 10 0 0 0 0-20zM56 122h20l-10 14zm68 0h20l-10 14z"/>
+  </svg>
   <div class="wrap split reveal">
     <div>
       <h2>교통카드 내장</h2>
@@ -133,25 +131,25 @@
   </div>
   <div class="deck" data-deck data-interval="5000">
     <div class="deck-track" tabindex="0" aria-label="앱 기능 카드. 좌우로 넘겨 보세요">
-      <article class="dcard t-ink">
+      <article class="dcard p-wallet">
         <div class="dtxt"><h3>지갑</h3><p>잔액 확인, 충전, 환불을 한 화면에서</p></div>
-        <div class="dshot"><div class="device"><div class="screen"><img src="assets/app/wallet.png" alt="" aria-label="TravelPass 앱 지갑 화면"><div class="ph"><b>지갑 화면</b><span>앱 스크린샷 자리</span><code>assets/app/wallet.png</code></div></div></div></div>
+        <div class="dshot"><svg class="dmark" viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 0 2H5v10h14v-6h-4a2 2 0 0 1 0-4h5a1 1 0 0 1 1 1v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg><div class="device"><div class="screen"><img src="assets/app/wallet.png" alt="" aria-label="TravelPass 앱 지갑 화면"><div class="ph"><b>지갑 화면</b><span>앱 스크린샷 자리</span><code>assets/app/wallet.png</code></div></div></div></div>
       </article>
-      <article class="dcard t-grad">
+      <article class="dcard p-pay">
         <div class="dtxt"><h3>결제</h3><p>QR 하나로 매장에서, 카드번호로 앱에서</p></div>
-        <div class="dshot"><div class="device"><div class="screen"><img src="assets/app/pay.png" alt="" aria-label="TravelPass 앱 결제 화면"><div class="ph"><b>결제 화면</b><span>앱 스크린샷 자리</span><code>assets/app/pay.png</code></div></div></div></div>
+        <div class="dshot"><svg class="dmark" viewBox="0 0 24 24"><path d="M3 3h8v8H3zm2 2v4h4V5zm8-2h8v8h-8zm2 2v4h4V5zM3 13h8v8H3zm2 2v4h4v-4zm8-2h3v3h-3zm5 0h3v3h-3zm-5 5h3v3h-3zm5 0h3v3h-3z"/></svg><div class="device"><div class="screen"><img src="assets/app/pay.png" alt="" aria-label="TravelPass 앱 결제 화면"><div class="ph"><b>결제 화면</b><span>앱 스크린샷 자리</span><code>assets/app/pay.png</code></div></div></div></div>
       </article>
-      <article class="dcard t-light">
+      <article class="dcard p-travel">
         <div class="dtxt"><h3>여행</h3><p>명소 추천부터 호텔·공연 예약까지</p></div>
-        <div class="dshot"><div class="device"><div class="screen"><img src="assets/app/travel.png" alt="" aria-label="TravelPass 앱 여행 화면"><div class="ph"><b>여행 화면</b><span>앱 스크린샷 자리</span><code>assets/app/travel.png</code></div></div></div></div>
+        <div class="dshot"><svg class="dmark" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg><div class="device"><div class="screen"><img src="assets/app/travel.png" alt="" aria-label="TravelPass 앱 여행 화면"><div class="ph"><b>여행 화면</b><span>앱 스크린샷 자리</span><code>assets/app/travel.png</code></div></div></div></div>
       </article>
-      <article class="dcard t-ink">
+      <article class="dcard p-living">
         <div class="dtxt"><h3>생활</h3><p>배달, 쇼핑, 외국인 커뮤니티</p></div>
-        <div class="dshot"><div class="device"><div class="screen"><img src="assets/app/living.png" alt="" aria-label="TravelPass 앱 생활 화면"><div class="ph"><b>생활 화면</b><span>앱 스크린샷 자리</span><code>assets/app/living.png</code></div></div></div></div>
+        <div class="dshot"><svg class="dmark" viewBox="0 0 24 24"><path d="M3 4h2l2.6 11.4A2 2 0 0 0 9.6 17H18a2 2 0 0 0 2-1.6L21.5 8H7.2L6.5 5H3zm5 16a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm9 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/></svg><div class="device"><div class="screen"><img src="assets/app/living.png" alt="" aria-label="TravelPass 앱 생활 화면"><div class="ph"><b>생활 화면</b><span>앱 스크린샷 자리</span><code>assets/app/living.png</code></div></div></div></div>
       </article>
-      <article class="dcard t-grad">
+      <article class="dcard p-transit">
         <div class="dtxt"><h3>교통</h3><p>교통카드 잔액 확인하고 바로 충전</p></div>
-        <div class="dshot"><div class="device"><div class="screen"><img src="assets/app/transit.png" alt="" aria-label="TravelPass 앱 교통 화면"><div class="ph"><b>교통 화면</b><span>앱 스크린샷 자리</span><code>assets/app/transit.png</code></div></div></div></div>
+        <div class="dshot"><svg class="dmark" viewBox="0 0 24 24"><path d="M6 3h12a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3l1.5 2.5h-2L16 18H8l-1.5 2.5h-2L6 18a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3zm-1 5v4h14V8zm2 6a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm10 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"/></svg><div class="device"><div class="screen"><img src="assets/app/transit.png" alt="" aria-label="TravelPass 앱 교통 화면"><div class="ph"><b>교통 화면</b><span>앱 스크린샷 자리</span><code>assets/app/transit.png</code></div></div></div></div>
       </article>
     </div>
     <div class="deck-ctl">

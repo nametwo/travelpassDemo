@@ -104,6 +104,29 @@ nav a.active{color:var(--orange);border-color:var(--orange)}
 @media(max-width:768px){.marks span{padding:var(--s2) var(--s3);font-size:18px}.marquee-track{animation-duration:30s}}
 @media(prefers-reduced-motion:reduce){.marquee-track{animation:none}.marquee{mask-image:none;-webkit-mask-image:none}.marks{flex-wrap:wrap}}
 
+/* 페이북 톤 실험: 파스텔 배경 + 클레이 아이콘 자리 + 배경 실루엣 */
+.bg-peach{background:#FFF1EA}
+.pb .st{padding-left:80px;min-height:56px}
+.pb .st-n.st-ic{width:56px;height:56px;border:0;background:transparent;box-shadow:none;transition:transform .3s var(--ease),opacity .3s}
+.pb .st.on .st-n.st-ic{transform:scale(1.1)}
+.pb .st.done .st-n.st-ic{opacity:.45}
+.pb .st-bar{left:27px;top:64px;bottom:calc(-1*var(--s4) + 8px)}
+.pb .st h3{line-height:56px}
+.pb .st.on h3{line-height:1.2;padding-top:18px}
+.pb .st.on p{margin-top:2px}
+/* 클레이 아이콘 자리: 파일이 오면 background-image 로 교체. 지금은 색 덩어리 */
+.ic-slot{display:block;width:40px;height:40px;border-radius:12px;background:var(--grad);opacity:.9;position:relative}
+.ic-slot::after{content:"";position:absolute;inset:6px 6px auto auto;width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.55)}
+.ic-slot[data-icon="passport"]{border-radius:8px 8px 8px 8px;width:30px;height:38px}
+.ic-slot[data-icon="topup"]{border-radius:50%}
+.ic-slot[data-icon="airport"]{clip-path:polygon(50% 0,100% 60%,70% 60%,80% 100%,20% 100%,30% 60%,0 60%);border-radius:0}
+.ic-slot[data-icon="tap"]{width:40px;height:26px;border-radius:6px}
+.pb .st-panel{background:transparent;border:0;box-shadow:none;overflow:visible}
+.pb .bg-mark{position:absolute;right:-6%;bottom:-4%;width:70%;height:auto;fill:#FF682C;opacity:.05;transform:rotate(-12deg);pointer-events:none}
+.pb .st-shot .device{border-color:transparent;box-shadow:0 32px 64px rgba(16,16,16,.16)}
+.pb .st-final{border-radius:var(--r-surface)}
+@media(max-width:860px){.pb .st{padding-left:68px}.pb .st-n.st-ic{width:48px;height:48px}.pb .st h3{line-height:48px}}
+
 /* 자동 진행 스테퍼 (발급 → 수령): 왼쪽 세로 스테퍼 + 오른쪽 화면 패널 */
 .stepper{display:grid;grid-template-columns:1fr 1fr;gap:var(--s7);align-items:center}
 .st-track{list-style:none;margin-top:var(--s6);display:grid;gap:var(--s4)}
@@ -179,6 +202,14 @@ nav a.active{color:var(--orange);border-color:var(--orange)}
 .who{text-align:center;margin-top:var(--s4)}
 @media(max-width:860px){.specs{grid-template-columns:1fr 1fr}.specs div{border-bottom:1px solid var(--line)}.specs div:nth-child(2n){border-right:0}.specs div:nth-last-child(-n+2){border-bottom:0}}
 
+/* 원형 오브젝트 (WOWPASS식): 통화 · 결제수단을 같은 원 틀에 */
+.orb{width:var(--size,140px);height:var(--size,140px);border-radius:50%;display:grid;place-items:center;font-weight:900;letter-spacing:-.04em;font-size:calc(var(--size,140px)*.38);box-shadow:0 20px 48px rgba(16,16,16,.10);transition:transform .3s var(--ease)}
+.orb:hover{transform:scale(1.05)}
+.orb-ink{background:var(--grad);color:#fff;box-shadow:0 24px 56px rgba(255,104,44,.35)}
+.orb-light{background:var(--cream);color:var(--ink)}
+.orb-white{background:#fff;color:var(--ink);font-size:calc(var(--size,140px)*.16);border:1px solid var(--line)}
+@media(max-width:860px){.orbit .orb{--size:88px!important}.orb-white{font-size:12px}}
+
 /* 통화 동전 (CSS 3D, Y축 회전) */
 .coins{display:flex;justify-content:center;gap:var(--s5);perspective:1200px;margin-bottom:var(--s7)}
 .coins:hover .coin{animation-play-state:paused}
@@ -220,6 +251,14 @@ nav a.active{color:var(--orange);border-color:var(--orange)}
 @media(prefers-reduced-motion:reduce){.carousel .device img.slide{transition:none}}
 
 /* 교통 띠: 문구 + 단말기 태그 장면 */
+.statement{position:relative;overflow:hidden}
+.statement .wrap{position:relative;z-index:1}
+.bg-mark-train{position:absolute;left:-4%;bottom:-12%;width:44%;height:auto;fill:#FF682C;opacity:.08;transform:rotate(-8deg);pointer-events:none}
+@media(max-width:860px){.bg-mark-train{width:80%;left:-20%;bottom:auto;top:-6%;opacity:.06}}
+/* 단말기 다듬기 */
+.t-screen,.t-pad{border-radius:24px;border-color:#2A2A2A}
+.t-screen{background:linear-gradient(180deg,#262626,#181818)}
+.t-pad{background:#1F1F1F}
 .statement h2{font-size:clamp(40px,5.6vw,72px);letter-spacing:-.05em}
 .statement .lead{font-size:clamp(18px,2vw,22px)}
 .tap{position:relative;width:min(100%,420px);height:440px;margin:0 auto}
@@ -283,6 +322,7 @@ nav a.active{color:var(--orange);border-color:var(--orange)}
 .device .screen{width:100%;height:100%;border-radius:calc(var(--r-device) - 10px);overflow:hidden;background:var(--cream);position:relative}
 .device img{width:100%;height:100%;object-fit:cover;object-position:top;opacity:0}
 .device img.ok{opacity:1}
+.device img.ok + .ph{display:none}
 .device .ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--s1);text-align:center;padding:var(--s3);color:var(--muted);font-size:13px;border:1px dashed var(--line);border-radius:inherit;margin:var(--s2)}
 .device .ph b{font-size:14px;color:var(--ink)}
 .device .ph code{font-size:11px;background:var(--white);padding:2px 6px;border-radius:4px;border:1px solid var(--line)}
@@ -300,6 +340,14 @@ nav a.active{color:var(--orange);border-color:var(--orange)}
 .dtxt p{font-size:18px;word-break:keep-all;max-width:22em}
 .dshot{position:relative}
 .dshot .device{position:absolute;left:50%;top:48px;translate:-50% 0;width:260px;box-shadow:0 24px 64px rgba(0,0,0,.25)}
+/* 파스텔 5색 (임시. 디자이너 확정 전) + 카드별 배경 실루엣 */
+.p-wallet{background:#FFF1EA}.p-pay{background:#FFF7DB}.p-travel{background:#EAF3FF}.p-living{background:#E9F7F1}.p-transit{background:#EEF0F3}
+.dcard[class*="p-"]{color:var(--ink)}
+.dcard[class*="p-"] .dtxt p{color:var(--muted)}
+.dcard[class*="p-"] .dtxt h3{font-size:clamp(30px,3.2vw,44px)}
+.dmark{position:absolute;right:-6%;top:-6%;width:62%;height:auto;fill:var(--orange);opacity:.07;transform:rotate(-8deg);pointer-events:none}
+.p-travel .dmark{fill:#3B82F6}.p-living .dmark{fill:#10B981}.p-transit .dmark{fill:#101010}
+.dcard[class*="p-"] .device{box-shadow:0 24px 64px rgba(16,16,16,.18)}
 .t-ink{background:var(--ink);color:#fff}
 .t-ink .dtxt p{color:rgba(255,255,255,.7)}
 .t-grad{background:var(--grad);color:#fff}

@@ -6,7 +6,7 @@
 <title>TravelPass | 혜택</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/site.css?v=27">
+<link rel="stylesheet" href="assets/site.css?v=37">
 </head>
 <body>
 <header>
@@ -41,6 +41,12 @@
   .callout h3{font-size:clamp(24px,3vw,32px)}
   .callout p{color:rgba(255,255,255,.7);margin-top:6px;word-break:keep-all}
   .callout .i{width:48px;height:48px;color:var(--orange);stroke-width:2.5}
+  /* 카테고리 6개 */
+  .cats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r-surface);overflow:hidden;margin-top:var(--s6)}
+  .cats div{background:var(--white);padding:var(--s4) var(--s3);min-height:140px;display:flex;flex-direction:column;justify-content:flex-end;gap:6px}
+  .cats b{font-size:26px;font-weight:900;letter-spacing:-.03em}
+  .cats span{font-size:14px;color:var(--muted);word-break:keep-all}
+  @media(max-width:860px){.cats{grid-template-columns:repeat(2,1fr)}.cats div{min-height:110px}.cats b{font-size:22px}}
   /* 유명 앱 벽 */
   .wall{display:flex;flex-wrap:wrap;gap:12px;margin-top:var(--s6)}
   .wall span{padding:16px 24px;border:1px solid var(--line);border-radius:var(--r-pill);font-size:18px;font-weight:900;letter-spacing:-.03em;color:var(--ink-2);transition:border-color .2s,color .2s,background .2s}
@@ -84,52 +90,34 @@
 
 <section class="phead" data-first>
   <div class="wrap">
-    <h1>어떤 앱에도<br>등록되는 카드.</h1>
-    <p class="lead">내 이름으로 된 카드니까.</p>
+    <h1>온라인 · 오프라인,<br>어디서든.</h1>
   </div>
 </section>
 
 
 
-<!-- 등록되는 앱 -->
+<!-- 온라인에서 되는 곳 -->
 <section class="bg-cream" id="use">
   <div class="wrap">
-    <h2>등록되는 앱</h2>
-    <p class="lead">결제수단에 넣기만 하면, 한국 카드와 똑같이</p>
-    <div class="wall" aria-label="결제 가능한 한국 앱">
-      <span>카카오T</span>
-      <span>배달의민족</span>
-      <span>쿠팡이츠</span>
-      <span>요기요</span>
-      <span>쿠팡</span>
-      <span>컬리</span>
-      <span>무신사</span>
-      <span>올리브영</span>
-      <span>네이버 예약</span>
-      <span>캐치테이블</span>
-      <span>야놀자</span>
-      <span>여기어때</span>
-      <span>코레일톡</span>
-      <span>티머니</span>
-      <span>NOL</span>
-      <span>JUMP</span>
-      <span>CGV</span>
-      <span>스타벅스</span>
-      <span>다이소</span>
-      <span>당근</span>
+    <h2>온라인에서 되는 곳</h2>
+    <p class="lead">한국 카드가 되는 곳이면, 전부.</p>
+    <div class="cats">
+      <div><b>배달</b><span>배달의민족 · 쿠팡이츠 같은</span></div>
+      <div><b>택시</b><span>카카오T · 외국인용 K.ride</span></div>
+      <div><b>쇼핑</b><span>쿠팡 · 무신사 · 올리브영</span></div>
+      <div><b>예약</b><span>숙소 · 식당 · 레저</span></div>
+      <div><b>티켓</b><span>기차 · 공연 · 입장권</span></div>
+      <div><b>매장</b><span>편의점 · 카페 · 백화점 · 시장</span></div>
     </div>
-    <div class="callout">
-      <div><h3>여기 없는 앱도 됩니다</h3><p>한국 카드가 되는 곳이면, 트래블패스도 됩니다</p></div>
-      <svg class="i" viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>
-    </div>
+    <p class="small soon">※ 앱 회원가입은 각 서비스 정책에 따릅니다. 앱 안에서 바로 되는 서비스는 아래에서.</p>
   </div>
 </section>
 
 <!-- 가입까지 한 번에 -->
 <section class="bg-white">
   <div class="wrap">
-    <h2>가입도 지원하는 앱</h2>
-    <p class="lead">여권 인증 한 번으로 회원가입까지, 앱 안에서</p>
+    <h2>웬만한 건, 앱 안에서 편리하게.</h2>
+    <p class="lead">가입은 이미 돼 있습니다.</p>
     <div class="svc" aria-label="앱 연동 서비스">
       <div><b>K.ride</b><span>외국인용 택시 호출</span></div>
       <div><b>코레일</b><span>기차표 예매</span></div>
@@ -143,14 +131,14 @@
   </div>
 </section>
 
-<!-- 이름이 없으면 안 되는 것들 -->
+<!-- 다른 카드와 다른 점 -->
 <section class="bg-cream cmp">
   <div class="wrap">
-    <h2>이름이 없으면 안 되는 것들</h2>
+    <h2>다른 카드와 다른 점</h2>
     <table>
-      <thead><tr><th scope="col"></th><th scope="col">무기명 선불카드</th><th scope="col" class="us">Travel Pass</th></tr></thead>
+      <thead><tr><th scope="col"></th><th scope="col">일반 여행카드</th><th scope="col" class="us">Travel Pass</th></tr></thead>
       <tbody>
-        <tr><th scope="row">앱 등록</th><td class="them"><span class="no">안 됨</span></td><td class="us"><span class="ok">배민 · 카카오T · 쿠팡</span></td></tr>
+        <tr><th scope="row">앱 결제</th><td class="them"><span class="no">안 됨</span></td><td class="us"><span class="ok">됨</span></td></tr>
         <tr><th scope="row">온라인 결제</th><td class="them"><span class="no">안 됨</span></td><td class="us"><span class="ok">됨</span></td></tr>
         <tr><th scope="row">환불</th><td class="them"><span class="no">창구 방문</span></td><td class="us"><span class="ok">앱에서 바로</span></td></tr>
         <tr><th scope="row">충전</th><td class="them"><span class="no">전용 키오스크</span></td><td class="us"><span class="ok">190개국 통화 · 앱 · 편의점 · ATM</span></td></tr>
