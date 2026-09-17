@@ -522,7 +522,7 @@ footer .bottom{margin-top:var(--s6);padding-top:var(--s3);border-top:1px solid v
   /* 앱 연동 서비스 */
   .svcs{display:grid;gap:var(--s5);margin-top:var(--s6)}
   .svcs h3{font-size:18px;color:var(--muted);letter-spacing:0;margin-bottom:var(--s2)}
-  .svcs .svc{margin-top:0;grid-template-columns:repeat(3,1fr)}
+  .svcs .svc{margin-top:0;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
   .svc{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r-surface);overflow:hidden;margin-top:var(--s4)}
   .svc div{background:var(--white);padding:var(--s4) var(--s3);min-height:150px;display:flex;flex-direction:column;justify-content:space-between;transition:background .2s}
   .svc div:hover{background:var(--orange-soft)}
