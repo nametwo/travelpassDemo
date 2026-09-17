@@ -11,8 +11,8 @@
   // 스토어 링크는 lib/stores.ts 단일 출처를 사용한다.
   document.querySelectorAll('[data-store]').forEach(a => a.href = STORE[a.dataset.store]);
 
-  // QR 은 public/tp/qr.svg 한 곳만 본다. 스토어 분기 URL 이 확정되면 그 파일만 교체하면 된다.
-  const QR = '<img src="/tp/qr.svg" alt="" width="180" height="180" />';
+  // QR 은 publicassets/qr.svg 한 곳만 본다. 스토어 분기 URL 이 확정되면 그 파일만 교체하면 된다.
+  const QR = '<img src="assets/qr.svg" alt="" width="180" height="180" />';
   document.querySelectorAll('[data-qr]').forEach(el => el.innerHTML = QR);
 
   // 자동 순환 화면 (data-carousel): 이미지가 로드된 슬라이드만 순환
