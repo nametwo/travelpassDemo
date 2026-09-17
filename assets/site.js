@@ -2,7 +2,6 @@
 // TravelPass 카드소개·혜택 페이지 인터랙션. 페이지 useEffect 에서 initTp() 호출, 정리 함수 반환.
 
 (function(){
-  // 스토어 링크 (TODO: 실제 값으로 교체)
   const STORE = { ios: 'https://apps.apple.com/app/id0000000000', android: 'https://play.google.com/store/apps/details?id=com.travelpass.app' };
   const _ints = [], _ios = [], _vis = []
   const _int = (fn, ms) => { const id = setInterval(fn, ms); _ints.push(id); return id }

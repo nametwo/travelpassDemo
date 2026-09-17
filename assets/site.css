@@ -520,12 +520,15 @@ footer .bottom{margin-top:var(--s6);padding-top:var(--s3);border-top:1px solid v
   .wall span:hover{border-color:var(--orange);color:var(--orange);background:var(--orange-soft)}
   @media(max-width:600px){.wall span{padding:12px 16px;font-size:15px}}
   /* 앱 연동 서비스 */
+  .svcs{display:grid;gap:var(--s5);margin-top:var(--s6)}
+  .svcs h3{font-size:18px;color:var(--muted);letter-spacing:0;margin-bottom:var(--s2)}
+  .svcs .svc{margin-top:0;grid-template-columns:repeat(3,1fr)}
   .svc{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r-surface);overflow:hidden;margin-top:var(--s4)}
   .svc div{background:var(--white);padding:var(--s4) var(--s3);min-height:150px;display:flex;flex-direction:column;justify-content:space-between;transition:background .2s}
   .svc div:hover{background:var(--orange-soft)}
   .svc b{font-size:20px;font-weight:900;letter-spacing:-.03em;color:var(--ink)}
   .svc span{font-size:15px;color:var(--muted);word-break:keep-all;margin-top:var(--s2)}
-  @media(max-width:860px){.svc{grid-template-columns:repeat(2,1fr)}.svc div{min-height:120px}}
+  @media(max-width:860px){.svc,.svcs .svc{grid-template-columns:repeat(2,1fr)}.svc div{min-height:120px}}
   /* 혜택 */
   .zero{margin-top:var(--s7);border-radius:var(--r-surface);background:var(--grad);color:#fff;padding:var(--s6) var(--s5);display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr;gap:var(--s4);align-items:center}
   .zero h3{font-size:clamp(28px,3.4vw,44px);letter-spacing:-.04em}
